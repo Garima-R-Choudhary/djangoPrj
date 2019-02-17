@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div class=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop101/css/bootstrap.min.css' %}" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+
+            <span class="navbar-brand mb-0 h1">Shop101</span>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav align-item-end>
+                    <li class=" nav-item">
+                    <a class="nav-link" href="#">Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">signUp</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            {% for product in product_list %}
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'shop101/assets/img1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.product_name}}</h5>
+
+                        <p class="card-text">{{product.description}}</p>
+                        <a href="product/{{product.id}}" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+    <script src="{% static 'shop101/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

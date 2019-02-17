@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div class=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'shop101/css/bootstrap.min.css' %}" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+
+            <span class="navbar-brand mb-0 h1">Shop101</span>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav align-item-end>
+                    <li class=" nav-item">
+                    <a class="nav-link" href="#">Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">signUp</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+       <div class='row mt-3'>
+            <div class="col-6"> 
+                <img src={{product.image_url}}/>
+            </div>
+            <div class="col-6"> 
+            <h3>{{product.product_name}}</h3>
+            <p>{{product.description}}</p>
+            <h5>{{product.price}}</h5>
+            </div>
+       </div>
+    </div>
+
+
+
+
+    <script src="{% static 'shop101/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
